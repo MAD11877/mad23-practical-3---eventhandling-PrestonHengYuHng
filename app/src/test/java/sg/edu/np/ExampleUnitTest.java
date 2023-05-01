@@ -1,4 +1,4 @@
-package com.example.listactivity;
+package sg.edu.np;
 
 import org.junit.Test;
 

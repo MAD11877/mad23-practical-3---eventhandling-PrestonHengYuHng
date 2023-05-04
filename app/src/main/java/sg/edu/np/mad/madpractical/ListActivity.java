@@ -3,9 +3,8 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.content.Intent;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.Toast;
+import java.util.Random;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -35,7 +34,10 @@ public class ListActivity extends AppCompatActivity {
                 builder.setPositiveButton("VIEW", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int id) {
+                        Random random = new Random();
+                        int randomNumber = random.nextInt(90000000) + 10000000;
                         Intent view = new Intent(ListActivity.this, MainActivity.class);
+                        view.putExtra("Random Number", randomNumber);
                         startActivity(view);
 
                     }
